@@ -1,5 +1,5 @@
 import { toggleForm, clearForm } from "./form";
-import { initdb, getDb, postDb } from "./database";
+import { initdb, getDb, postDb, deleteDb } from "./database";
 import { fetchCards } from "./card";
 import "../css/index.css";
 import { Tooltip, Toast, Popover } from "bootstrap";
@@ -33,7 +33,7 @@ form.addEventListener("submit", (event) => {
 	let name = document.getElementById("name").value;
 	let phone = document.getElementById("phone").value;
 	let email = document.getElementById("email").value;
-    let profile = document.querySelector('input[type="radio"]:checked').value;
+	let profile = document.querySelector('input[type="radio"]:checked').value;
 
 	// Post form data to IndexedDB OR Edit an existing card in IndexedDB
 	if (submitBtnToUpdate == false) {
@@ -51,3 +51,12 @@ form.addEventListener("submit", (event) => {
 	// Reload the DOM
 	fetchCards();
 });
+
+window.deleteCard = (e) => {
+	// Grabs the id from the button element attached to the contact card.
+	let id = parseInt(e.id);
+	// Delete the card
+	deleteDb(id);
+	// Reload the DOM
+	fetchCards();
+};
