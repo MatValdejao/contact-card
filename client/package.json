@@ -1,19 +1,36 @@
 {
-  "name": "contact-card",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MatValdejao/contact-card.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MatValdejao/contact-card/issues"
-  },
-  "homepage": "https://github.com/MatValdejao/contact-card#readme"
+	"name": "contact-card",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack --mode development",
+		"dev": "webpack-dev-server",
+		"start": "webpack --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MatValdejao/contact-card.git"
+	},
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MatValdejao/contact-card/issues"
+	},
+	"homepage": "https://github.com/MatValdejao/contact-card#readme",
+	"devDependencies": {
+		"@babel/core": "^7.19.3",
+		"@babel/preset-env": "^7.19.4",
+		"babel-loader": "^8.2.5",
+		"css-loader": "^6.7.1",
+		"html-webpack-plugin": "^5.5.0",
+		"style-loader": "^3.3.1",
+		"webpack": "^5.74.0",
+		"webpack-cli": "^4.10.0"
+	},
+	"dependencies": {
+		"@popperjs/core": "^2.11.6",
+		"bootstrap": "^5.2.2"
+	}
 }
