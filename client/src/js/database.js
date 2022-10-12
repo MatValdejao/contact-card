@@ -17,7 +17,7 @@ export const initdb = async () => {
 	});
 };
 
-export const getdb = async () => {
+export const getDb = async () => {
 	console.log("GET from the database");
 
 	// Create a connection to the IndexedDB database and the version we want to use.
@@ -38,7 +38,7 @@ export const getdb = async () => {
 	return result;
 };
 
-export const postdb = async () => {
+export const postDb = async () => {
 	console.log("POST to the database");
 
 	// Create a connection to the database and specify the version we want to use.
